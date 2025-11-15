@@ -411,6 +411,14 @@ footer {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+        background:
+            url('voronoi-pattern.svg') repeat-x top,
+            radial-gradient(circle, rgba(216, 216, 216, 0.3) 1px, transparent 1px) 0 300px,
+            linear-gradient(to bottom, #fafafa 0%, #ffffff 300px);
+        background-size:
+            2400px 300px,
+            24px 24px,
+            100% 100%;
     }
 
     h1 {
