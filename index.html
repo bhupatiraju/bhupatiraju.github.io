@@ -137,7 +137,7 @@
                 </li>
                 <li>
                     <div class="pub-title">Mapping the Geometry of Law Using Natural Language Processing</div>
-                    <div class="pub-authors">(with D. Chen and K. Venkataramanan)</div>
+                    <div class="pub-authors">(with D. L. Chen and K. Venkataramanan)</div>
                     <div class="pub-venue"><a href="https://publicera.kb.se/ejels/article/view/18073" target="_blank" rel="noopener noreferrer">European Journal of Empirical Legal Studies</a></div>
                 </li>
                 <li>
@@ -166,7 +166,7 @@
                 </li>
                 <li>
                     <div class="pub-title">Government Analytics Using Machine Learning</div>
-                    <div class="pub-authors">(with D. Chen, S. Jankin, G. Kim, M. Kupi, and M. R. Maqueda)</div>
+                    <div class="pub-authors">(with D. L. Chen, S. Jankin, G. Kim, M. Kupi, and M. R. Maqueda)</div>
                     <div class="pub-venue"><a href="https://www.worldbank.org/en/publication/government-analytics" target="_blank" rel="noopener noreferrer">The Government Analytics Handbook</a></div>
                 </li>
             </ul>
@@ -184,7 +184,7 @@
             <ul class="publications-list">
                 <li>
                     <div class="pub-title">Litigation as Scrutiny: A Four Decade Analysis of Environmental Justice, Firms, and Pollution in India</div>
-                    <div class="pub-authors">(with D. Chen, S. Joshi, P. Neis, and S. Singh)</div>
+                    <div class="pub-authors">(with D. L. Chen, S. Joshi, P. Neis, and S. Singh)</div>
                     <div class="pub-venue"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5013333" target="_blank" rel="noopener noreferrer">Working Paper</a></div>
                 </li>
                 <li>
@@ -259,7 +259,7 @@
 
             <div class="job">
                 <h3>Natural Language Processing</h3>
-                <p class="meta">KREA University, Sri City, India · March 2022 Trimester</p>
+                <p class="meta"><a href="https://krea.edu.in/" target="_blank" rel="noopener noreferrer">KREA University</a>, Sri City, India · March 2022 Trimester</p>
                 <p>
                     Taught undergraduate course covering fundamental NLP techniques for studying document corpora.
                     Students selected document collections, formulated research questions, and applied NLP methods
@@ -424,5 +424,32 @@
     <footer role="contentinfo">
         <p>&copy; 2025 Sandeep Bhupatiraju</p>
     </footer>
+
+    <script>
+        // Highlight active navigation section
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        function highlightNav() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = '#CC0000';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNav);
+        window.addEventListener('load', highlightNav);
+    </script>
 </body>
 </html>
