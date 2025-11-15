@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple circular favicon -->
+
+  <!-- Outer circle -->
+  <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#e8eef3" stroke-width="1"/>
+
+  <!-- Simple centered dot -->
+  <circle cx="32" cy="32" r="12" fill="#CC0000"/>
+</svg>
