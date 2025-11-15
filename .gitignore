@@ -16,3 +16,8 @@ Thumbs.db
 *.pdf
 PATTERNS.md
 WIDTHS.md
+
+# Image files
+*.jpg
+*.jpeg
+*.png
