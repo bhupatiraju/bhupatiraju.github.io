@@ -11,3 +11,8 @@ Thumbs.db
 
 # Backup files
 *.bak
+
+# Development files
+*.pdf
+PATTERNS.md
+WIDTHS.md
