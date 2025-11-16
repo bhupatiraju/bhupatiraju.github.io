@@ -464,6 +464,10 @@ footer {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
+        scrollbar-color: rgba(204, 0, 0, 0.3) transparent;
+    }
+
+    .nav-container:hover {
         scrollbar-color: #CC0000 transparent;
     }
 
@@ -476,8 +480,12 @@ footer {
     }
 
     .nav-container::-webkit-scrollbar-thumb {
-        background: #CC0000;
+        background: rgba(204, 0, 0, 0.3);
         border-radius: 3px;
+    }
+
+    .nav-container:hover::-webkit-scrollbar-thumb {
+        background: #CC0000;
     }
 
     nav a {
