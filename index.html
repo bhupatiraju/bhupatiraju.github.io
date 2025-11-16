@@ -46,8 +46,8 @@
     <header role="banner">
         <div class="header-content">
             <div class="header-text">
-                <h1>Sandeep Bhupatiraju</h1>
-                <p class="tagline">AI Solutions Architect · Researcher · Ph.D. Mathematics</p>
+                <h1>Sandeep Bhupatiraju<span class="cursor"></span></h1>
+                <p class="tagline">AI Solutions Architect <span style="color: #CC0000; font-size: 1.3em;">·</span> Researcher <span style="color: #CC0000; font-size: 1.3em;">·</span> Ph.D. Mathematics</p>
             </div>
         </div>
     </header>
@@ -85,8 +85,8 @@
                 <p class="meta"><a href="https://www.worldbank.org/" target="_blank" rel="noopener noreferrer">World Bank Group</a>, Washington D.C. · 2018–Present</p>
                 <p>
                     Lead AI solutions development and large-scale data engineering for governance analytics
-                    across multi-country projects. Developed production RAG systems including the K360 Knowledge
-                    Platform using Azure AI Search, expertise discovery platform called Sherlock, and data pipelines
+                    across multi-country projects. Developed production RAG systems for knowledge search using
+                    Azure AI Search, expertise discovery and retrieval platforms, and data pipelines
                     for processing and automating BOOST expenditure and budget data from various countries.
                     Built large-scale legal datasets covering India (83M+ district court cases), Kenya, and Indonesia
                     (12M records).
@@ -95,7 +95,7 @@
 
             <div class="job">
                 <h3>Consultant (AI & NLP)</h3>
-                <p class="meta"><a href="https://www.thegef.org/" target="_blank" rel="noopener noreferrer">Global Environment Facility</a>, Washington D.C. · 2024–2025</p>
+                <p class="meta"><a href="https://www.thegef.org/" target="_blank" rel="noopener noreferrer">Global Environment Facility (GEF)</a>, Washington D.C. · 2024–2025</p>
                 <p>
                     Developed structured information extraction to track technology use across GEF project corpus,
                     including classification and taxonomy development. Analyzed gaps between advisory recommendations
@@ -128,7 +128,7 @@
                 <h3>World Bank, ITS</h3>
                 <p class="meta"><a href="https://www.worldbank.org/" target="_blank" rel="noopener noreferrer">World Bank Group</a> · 2025–Present</p>
                 <p>
-                    Coordinate with development team to architect and deliver K360 Knowledge Platform and Sherlock expertise discovery system. Oversee technical requirements, feature prioritization, and deliverable timelines while ensuring alignment between technical implementation and organizational needs.
+                    Coordinate with development team to architect and deliver knowledge search and expertise discovery systems. Oversee technical requirements, feature prioritization, and deliverable timelines while ensuring alignment between technical implementation and organizational needs.
                 </p>
             </div>
         </section>
@@ -314,7 +314,7 @@
 
             <div class="job">
                 <h3>Teaching Assistant</h3>
-                <p class="meta">Indiana University, Bloomington, USA</p>
+                <p class="meta"><a href="https://math.indiana.edu/index.html" target="_blank" rel="noopener noreferrer">Department of Mathematics, Indiana University</a>, Bloomington, USA</p>
                 <p>
                     Served as TA for undergraduate and graduate courses including Calculus I and II,
                     Linear Algebra, Mathematical Analysis, Introduction to Mathematical Statistics,
@@ -356,74 +356,101 @@
             <h2>Selected Projects</h2>
 
             <div class="project">
-                <h3>K360 Knowledge Platform</h3>
-                <p class="meta">World Bank Group · 2025–Present</p>
+                <h3>BOOST & PFM Analytics</h3>
+                <p class="meta">World Bank Group · 2024–Present</p>
                 <p>
-                    Enterprise retrieval-augmented generation system using Azure AI Search for multi-document
-                    question answering. Implemented query decomposition, cross-encoder reranking, and synthesis
-                    optimization. Collaborated on OpenAPI integration and system architecture.
+                    Built Delta Live Tables pipelines in Databricks to automate BOOST data harmonization workflows
+                    across countries.
                 </p>
-                <p class="tech">Technologies/Tools: Azure AI Search, LangGraph, LangChain, OpenAPI, Redis</p>
-            </div>
-
-            <div class="project">
-                <h3>Sherlock Expertise Discovery System</h3>
-                <p class="meta">World Bank Group · 2025–Present</p>
                 <p>
-                    Novel expertise quantification system aggregating signals across heterogeneous data sources.
-                    Designed retrieval algorithms for subject matter expert matching with multi-dimensional
-                    metrics balancing recency, depth, and breadth of expertise.
+                    Developed bottleneck identification tool that extracts textual evidence from Public Expenditure
+                    Reviews and PFM reports across revenue management, budget planning, expenditure control, and
+                    institutional capacity.
                 </p>
-                <p class="tech">Technologies/Tools: PostgreSQL, Azure AI Search, FAISS, Python</p>
-            </div>
-
-            <div class="project">
-                <h3>Legal Entity Resolution System</h3>
-                <p class="meta">Paradigm Case Management · 2024</p>
-                <p>
-                    Multi-agent system for identifying identical persons across heterogeneous legal documents
-                    (court filings, police reports, case records). Implemented reflection pattern for iterative
-                    accuracy improvement and consensus-based extraction using judge-advocate-skeptic pattern.
-                </p>
-                <p class="tech">Technologies: LangGraph, CrewAI, AWS Lambda, Pydantic</p>
-            </div>
-
-            <div class="project">
-                <h3>India Legal Dataset</h3>
-                <p class="meta">World Bank Group · 2018–2023</p>
-                <p>
-                    Built large-scale legal dataset covering 83M district court cases, 8M high court cases,
-                    and 150K appellate cases from India. Designed ETL pipelines using Databricks and Delta
-                    Live Tables with Medallion architecture. Applied for bias detection and policy research.
-                </p>
-                <p class="tech">Technologies: Databricks, Delta Live Tables, PostgreSQL, Scrapy</p>
+                <p class="tech">Technologies/Tools: Delta Live Tables, Databricks, Instructor, OpenAI, Python, SQL</p>
                 <p class="project-link">
-                    <a href="https://www.devdatalab.org/judicial-data" target="_blank" rel="noopener noreferrer" aria-label="Access India Legal Dataset">View dataset →</a>
+                    <a href="https://github.com/dime-worldbank/mega-boost" target="_blank" rel="noopener noreferrer" aria-label="View BOOST repository">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: text-bottom; margin-right: 0.3rem;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        BOOST
+                    </a>
+                    <a href="https://github.com/dime-worldbank/pfm-bottlenecks" target="_blank" rel="noopener noreferrer" aria-label="View PFM Bottlenecks repository" style="margin-left: 0.8rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: text-bottom; margin-right: 0.3rem;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        PFM Bottlenecks
+                    </a>
                 </p>
+            </div>
+
+            <div class="project">
+                <h3>eCourts Dataset & Knowledge Search</h3>
+                <p class="meta">World Bank Group · 2018–Present</p>
+                <p>
+                    Built one of the largest judicial datasets available, covering 83M+ district court cases,
+                    8M high court cases, and 150K appellate cases from India. Developed web scraping
+                    infrastructure handling CAPTCHAs and dynamic content. Processed and structured data at
+                    scale for research and policy applications.
+                </p>
+                <p>
+                    Designed retrieval-augmented generation system using Azure AI Search for multi-document
+                    question answering across development policy documents. Implemented query decomposition,
+                    cross-encoder reranking, and synthesis optimization.
+                </p>
+                <p class="tech">Technologies/Tools: Scrapy, Selenium, MongoDB, Azure AI Search, LangGraph, LangChain, Redis</p>
+                <p class="project-link">
+                    <a href="https://www.devdatalab.org/judicial-data" target="_blank" rel="noopener noreferrer" aria-label="Access eCourts Dataset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 0.3rem;">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        View dataset ›
+                    </a>
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Entity Resolution and Knowledge Graph System</h3>
+                <p class="meta">Paradigm Case Management & World Bank Group · 2024–Present</p>
+                <p>
+                    Multi-agent system for identifying identical persons across heterogeneous documents (court filings,
+                    police reports, case records). Implemented reflection pattern for iterative accuracy improvement and
+                    consensus-based extraction using judge-advocate-skeptic pattern. Developed Graph RAG system over Neo4j
+                    that automatically identifies missing evidence and documentation gaps by cross-referencing mentions across
+                    case files, police reports, and court filings. System alerts prosecutors to incomplete document chains
+                    before trial preparation, ensuring case integrity and discovery compliance.
+                </p>
+                <p>
+                    Designed expertise quantification system aggregating signals across heterogeneous data sources for
+                    subject matter expert matching. Developed retrieval algorithms with multi-dimensional metrics
+                    balancing recency, depth, and breadth of expertise.
+                </p>
+                <p class="tech">Technologies: Neo4j, LangGraph, CrewAI, Graph Transformers, Cypher, AWS Lambda, Pydantic, PostgreSQL, Azure AI Search, FAISS</p>
             </div>
 
             <div class="project">
                 <h3>Witchcraft Court Case Pattern Analysis</h3>
                 <p class="meta">Personal Research · 2023–2024</p>
                 <p>
-                    Multi-agent investigative system using CrewAI with specialized investigator personas.
-                    Implemented HyDE for semantic search over legal case documents. Deployed as web application.
+                    Multi-agent system for analyzing narrative structures in witchcraft court cases. Used graph transformers
+                    to extract knowledge graphs identifying relationships between accusers, defendants, and alleged acts.
+                    Agents collaboratively extract accusation patterns, classify crime typologies, and identify recurring
+                    themes across cases. Interactive T-SNE visualization enables exploration of how different types of
+                    accusations and legal narratives cluster and evolve.
                 </p>
-                <p class="tech">Technologies: CrewAI, Atomic Agents, HyDE, Chroma, Fly.io</p>
+                <p class="tech">Technologies/Tools: Atomic Agents, Graph Transformers, OpenAI, Fly.io</p>
                 <p class="project-link">
-                    <a href="https://witchcraft-cases.fly.dev" target="_blank" rel="noopener noreferrer" aria-label="View Witchcraft Court Case Pattern Analysis application">View application →</a>
+                    <a href="witchcraft-access.html" aria-label="View Witchcraft Court Case Pattern Analysis application details and access information">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 0.3rem;">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        View application ›
+                    </a>
                 </p>
-            </div>
-
-            <div class="project">
-                <h3>Graph RAG for Legal Case Networks</h3>
-                <p class="meta">Paradigm Case Management · 2024</p>
-                <p>
-                    Developed Graph RAG system over Neo4j connecting case-level information using graph transformers.
-                    Implemented Cypher queries for complex relationship traversal; designed knowledge graph schema
-                    optimized for legal entity relationships and temporal case evolution.
-                </p>
-                <p class="tech">Technologies: Neo4j, Cypher, graph transformers, LangGraph</p>
             </div>
         </section>
 

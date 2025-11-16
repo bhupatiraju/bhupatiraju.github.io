@@ -21,3 +21,6 @@ WIDTHS.md
 *.jpg
 *.jpeg
 *.png
+
+# Exception: Allow redacted screenshot
+!Screenshot_witchcraft_act.png
