@@ -481,31 +481,5 @@
         <p>&copy; 2025 Sandeep Bhupatiraju</p>
     </footer>
 
-    <script>
-        // Highlight active navigation section
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-        function highlightNav() {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === '#' + current) {
-                    link.style.color = '#CC0000';
-                }
-            });
-        }
-
-        window.addEventListener('scroll', highlightNav);
-        window.addEventListener('load', highlightNav);
-    </script>
 </body>
 </html>
