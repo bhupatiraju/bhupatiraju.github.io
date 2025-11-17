@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for sticky header */
+}
+
 ::selection {
     background: rgba(204, 0, 0, 0.2);
     color: inherit;
@@ -55,11 +61,16 @@ nav a {
     font-size: 16px;
     font-weight: 500;
     transition: color 0.2s;
+    position: relative;
 }
 
 nav a:hover {
     color: #CC0000;
     text-decoration: none;
+}
+
+nav a.active {
+    color: #CC0000;
 }
 
 /* Header */
@@ -138,7 +149,27 @@ main {
 section {
     margin-top: 1.5rem;
     padding: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
 }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation for sections */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+section:nth-child(6) { animation-delay: 0.6s; }
+section:nth-child(7) { animation-delay: 0.7s; }
+section:nth-child(8) { animation-delay: 0.8s; }
 
 h2 {
     font-size: 1.9rem;
@@ -328,8 +359,8 @@ a:hover {
 }
 
 .scholar-link {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
     font-size: 0.95rem;
     padding-left: 1.5rem;
     border-left: 3px solid transparent;
@@ -440,6 +471,18 @@ a:hover {
 .social-badges img {
     height: 20px;
     display: block;
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #CC0000 0%, #ff4444 100%);
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s ease-out;
 }
 
 /* Footer */
